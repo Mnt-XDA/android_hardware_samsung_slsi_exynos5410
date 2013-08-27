@@ -15,6 +15,8 @@
 #
 
 ifeq ($(TARGET_SOC),exynos5410)
+ifeq ($(TARGET_SLSI_VARIANT),insignal)
+
 exynos5410_dirs := \
 	libcamera2 \
 	libhwjpeg \
@@ -22,4 +24,5 @@ exynos5410_dirs := \
 
 include $(call all-named-subdir-makefiles,$(exynos5410_dirs))
 
+endif
 endif

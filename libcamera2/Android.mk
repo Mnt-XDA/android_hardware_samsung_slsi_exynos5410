@@ -6,10 +6,12 @@ include $(CLEAR_VARS)
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.product.board>.so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/hw
 
+PLATFORM_DIR := $(TARGET_BOARD_PLATFORM)-insignal
+
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../include \
 	$(TOP)/hardware/samsung_slsi/exynos/include \
-	$(TOP)/hardware/samsung_slsi/exynos5/include \
+	$(TOP)/hardware/samsung_slsi/$(PLATFORM_DIR)/include \
 	frameworks/native/include \
 	system/media/camera/include
 
